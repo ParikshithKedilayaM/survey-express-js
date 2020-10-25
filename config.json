@@ -1,0 +1,4 @@
+{
+    "template": "ejs",
+    "__comment__": "Alter only template value between 'ejs' or 'pug'"
+}

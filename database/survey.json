@@ -1,0 +1,56 @@
+{
+	"questions": [{
+			"id": "QuesGrailName",
+			"question": "What is your name?",
+			"choices": [{
+					"choice": "Lancelot"
+				},
+				{
+					"choice": "Arthur"
+				},
+				{
+					"choice": "Guineviere"
+				}
+			]
+		},
+		{
+			"id": "QuesGrailCapital",
+			"question": " What is the capital of Assyria?",
+			"choices": [{
+					"choice": "I don't know that!"
+				},
+				{
+					"choice": "Fly!!!"
+				}
+			]
+		},
+		{
+			"id": "QuesGrailQuest",
+			"question": "What is your quest?",
+			"choices": [{
+					"choice": "To find the Grail"
+				},
+				{
+					"choice": "To slay the rabbit "
+				},
+				{
+					"choice": "To find the Knights who say Ni!"
+				}
+			]
+		},
+		{
+			"id": "QuesGrailColor",
+			"question": "What is your favorite color?",
+			"choices": [{
+					"choice": "Blue"
+				},
+				{
+					"choice": "Red"
+				},
+				{
+					"choice": "I don't know"
+				}
+			]
+		}
+	]
+}

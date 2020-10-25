@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+
+head
+    meta(http-equiv="Content-Type" content="text/html; charset=ISO-8859-1")
+    title MVC Ex Solution Landing Page
+
+body
+    p Your current rendering preference is #{preference}
+    p
+    form(method='POST' action='/setPreference')
+        input(type="radio" name="preference" value="horizontal")
+        | Horizontal
+        br
+        input(type="radio" name="preference" value="vertical")
+        | Vertical
+        br
+        input(type="submit" name="submit" value="OK")

@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+
+head
+    meta(http-equiv="Content-Type" content="text/html; charset=ISO-8859-1")
+    title Survey
+
+body
+    p Survey page: #{page} for user #{username}
+      br
+      br
+      | #{question}
+    p
+      a(href='/preferences') Set your rendering preferences
+    
+    p
+    form(method='POST' action='/survey')
+        each choice, i in choices 
+            - var checked = selected === i ? true : false
+            if checked
+              input(type='radio' name='answer' value=i checked)
+            else
+              input(type='radio' name='answer' value=i)
+            | #{choices[i].choice}
+            if isVertical 
+              br
+        if page > 1
+            input(type='submit' name='submit' value='previous')
+            |
+            |
+        input(type='submit' name='submit' value='next')

@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+
+head
+    meta(http-equiv="Content-Type" content="text/html; charset=ISO-8859-1")
+    title MVC Ex Solution Landing Page
+
+body
+    p Best survey matches for #{username} best-to-worst:
+
+    p
+    ol
+        each match, user in users
+          li User: #{user} matched #{match} answers
+    p

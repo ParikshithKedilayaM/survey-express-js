@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Survey</title>
+</head>
+
+<body>
+    <p>
+        Survey page: <%= page %> for user <%= username %>
+        <br />
+        <br />
+        <%= question %>
+    </p>
+    <p>
+        <a href='/preferences'>Set your rendering preferences</a>
+    </p>
+    <p></p>
+    <form method='POST' action='/survey'>
+        <% for(var i=0; i < choices.length; i++) { %>
+            <input type='radio' name='answer' value='<%= i %>' <%= selected === i ? 'checked' : '' %> />
+            <%= choices[i].choice %>
+            <% if (isVertical) { %> <br /> <% } %>
+        <% } %>
+        <% if (page > 1) { %>
+            <input type='submit' name='submit' value='previous' />
+        <% } %>
+        <input type='submit' name='submit' value='next' />
+    </form>
+</body>
+
+</html>
